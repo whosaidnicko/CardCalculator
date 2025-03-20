@@ -7,7 +7,7 @@ fileprivate enum FocusedField {
 struct LoginView: View {
     @State private var isLoading: Bool = false
     
-    @EnvironmentObject var authManager: AuthService
+    
     @StateObject var loginVM: LoginViewModel = .init()
     @FocusState fileprivate var isFocused: FocusedField?
     
@@ -91,13 +91,7 @@ struct LoginView: View {
             
             MainButtonView(title: "Login", icon: nil, action: {
                 isLoading = true
-                authManager.regularSignIn(email: loginVM.login, password: loginVM.password) { error in
-                    defer {isLoading = false}
-                    if let e = error {
-                        print(e.localizedDescription)
-                        loginVM.password.removeAll()
-                    }
-                }
+            
             })
             .disabled((!loginVM.isLoginValid) || isLoading)
             .opacity((!loginVM.isLoginValid) || isLoading ? 0.6 : 1)
@@ -133,7 +127,7 @@ struct LoginView: View {
             
             MainButtonView(title: "Sign Up", icon: nil, action: {
                 isLoading = true
-                authManager.regularCreateAccount(email: loginVM.createLogin, password: loginVM.createPassword)
+              
                 AppSettings.shared.name = loginVM.createName
                 AppSettings.shared.login = loginVM.createLogin
             })

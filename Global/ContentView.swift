@@ -3,12 +3,10 @@ import SwiftUI
 struct ContentView: View {
     
     @ObservedObject var tabbarVM = TabbarViewModel.shared
-    @EnvironmentObject var authService: AuthService
+    
     
     var body: some View {
-        if !authService.signedIn {
-            LoginView()
-        } else {
+      
             NavigationStack {
                 VStack(spacing: 0) {
                     VStack(spacing: 0) {
@@ -31,7 +29,7 @@ struct ContentView: View {
                     }
                 }
             }
-        }
+        
     }
 }
 

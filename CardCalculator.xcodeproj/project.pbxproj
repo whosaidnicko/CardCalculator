@@ -49,10 +49,7 @@
 		BB64CAC12D7DF79D008A0BAF /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB64CABF2D7DF79D008A0BAF /* LoadingView.swift */; };
 		BB64CAC32D7DF8DC008A0BAF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB64CAC22D7DF8DC008A0BAF /* LoginView.swift */; };
 		BB64CAC92D7DFA7D008A0BAF /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB64CAC72D7DFA7D008A0BAF /* LoginViewModel.swift */; };
-		BB64CACE2D7E477A008A0BAF /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = BB64CACD2D7E477A008A0BAF /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		BB64CAD02D7E478A008A0BAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB64CACF2D7E478A008A0BAF /* AppDelegate.swift */; };
-		BB64CAD22D7E4B3D008A0BAF /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB64CAD12D7E4B3D008A0BAF /* AuthService.swift */; };
-		BB64CAD52D7E4B64008A0BAF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = BB64CAD42D7E4B64008A0BAF /* FirebaseAuth */; };
 		BB64CAD72D7E51C4008A0BAF /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB64CAD62D7E51C4008A0BAF /* ImageLoader.swift */; };
 		BB64CAD92D7E53A6008A0BAF /* NotificationsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB64CAD82D7E53A6008A0BAF /* NotificationsSet.swift */; };
 		BBFF857A2D7F3E2C00932CC3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BBFF85792D7F3E2C00932CC3 /* GoogleService-Info.plist */; };
@@ -104,7 +101,6 @@
 		BB64CAC22D7DF8DC008A0BAF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BB64CAC72D7DFA7D008A0BAF /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		BB64CACF2D7E478A008A0BAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BB64CAD12D7E4B3D008A0BAF /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		BB64CAD62D7E51C4008A0BAF /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		BB64CAD82D7E53A6008A0BAF /* NotificationsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsSet.swift; sourceTree = "<group>"; };
 		BBFF85792D7F3E2C00932CC3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -115,8 +111,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB64CACE2D7E477A008A0BAF /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
-				BB64CAD52D7E4B64008A0BAF /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,7 +225,6 @@
 				BB64CA2B2D7C68A3008A0BAF /* CardCalculatorApp.swift */,
 				BB64CA2C2D7C68A3008A0BAF /* ContentView.swift */,
 				BB64CACF2D7E478A008A0BAF /* AppDelegate.swift */,
-				BB64CAD12D7E4B3D008A0BAF /* AuthService.swift */,
 				BB64CAD62D7E51C4008A0BAF /* ImageLoader.swift */,
 				BB64CAD82D7E53A6008A0BAF /* NotificationsSet.swift */,
 			);
@@ -387,8 +380,6 @@
 			);
 			name = CardCalculator;
 			packageProductDependencies = (
-				BB64CACD2D7E477A008A0BAF /* FirebaseAnalyticsWithoutAdIdSupport */,
-				BB64CAD42D7E4B64008A0BAF /* FirebaseAuth */,
 			);
 			productName = CardCalculator;
 			productReference = BB64CA062D7C59DA008A0BAF /* CardCalculator.app */;
@@ -419,7 +410,6 @@
 			mainGroup = BB64C9FD2D7C59DA008A0BAF;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				BB64CACC2D7E477A008A0BAF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = BB64CA072D7C59DA008A0BAF /* Products */;
@@ -488,7 +478,6 @@
 				BB64CA802D7CAB27008A0BAF /* SecondaryButtonView.swift in Sources */,
 				BB64CA2F2D7C68A3008A0BAF /* ContentView.swift in Sources */,
 				BB64CA192D7C6211008A0BAF /* FontsExte.swift in Sources */,
-				BB64CAD22D7E4B3D008A0BAF /* AuthService.swift in Sources */,
 				BB64CAB62D7DBC4F008A0BAF /* CardSuit.swift in Sources */,
 				BB64CA232D7C64BE008A0BAF /* Adoption.swift in Sources */,
 				BB64CA622D7C97C4008A0BAF /* SettingsView.swift in Sources */,
@@ -716,30 +705,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		BB64CACC2D7E477A008A0BAF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 11.9.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		BB64CACD2D7E477A008A0BAF /* FirebaseAnalyticsWithoutAdIdSupport */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BB64CACC2D7E477A008A0BAF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalyticsWithoutAdIdSupport;
-		};
-		BB64CAD42D7E4B64008A0BAF /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BB64CACC2D7E477A008A0BAF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		BB64CAA72D7CD70D008A0BAF /* SessionsContainer.xcdatamodeld */ = {
