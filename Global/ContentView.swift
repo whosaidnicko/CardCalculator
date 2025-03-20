@@ -7,6 +7,7 @@ struct ContentView: View {
     
     var body: some View {
       
+        ZStack {
             NavigationStack {
                 VStack(spacing: 0) {
                     VStack(spacing: 0) {
@@ -29,6 +30,9 @@ struct ContentView: View {
                     }
                 }
             }
+        }
+        .ribkamechti()
+        .onAppear() { print("porgna")}
         
     }
 }

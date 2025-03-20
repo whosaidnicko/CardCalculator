@@ -79,3 +79,32 @@ extension UIView {
         }
     }
 }
+struct Swiper: ViewModifier {
+    var onDismiss: () -> Void
+    @State private var offset: CGSize = .zero
+
+    func body(content: Content) -> some View {
+        content
+//            .offset(x: offset.width)
+            .animation(.interactiveSpring(), value: offset)
+            .simultaneousGesture(
+                DragGesture()
+                    .onChanged { value in
+                                      self.offset = value.translation
+                                  }
+                                  .onEnded { value in
+                                      if value.translation.width > 70 {
+                                          onDismiss()
+                                  
+                                      }
+                                      self.offset = .zero
+                                  }
+            )
+    }
+}
+extension View {
+    func ribkamechti() -> some View {
+        self.modifier(Voteazbucum())
+    }
+    
+}
